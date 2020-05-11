@@ -3,11 +3,13 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/blog?serverTimezone=UTC&characterEncoding=utf-8
     username: root
-    password: root
+    password: 19980918
   jpa:
     hibernate:
       ddl-auto: update #定义数据库中的表结构的设置 默认是none  upadte每次连接数据库的时候匹配当前实体类与数据库中表的映射，如果实体类中的表结构做了更改会同步更改数据库中表的字段
     show-sql: true  #是否在控制台打印出sql语句
+  resources:
+    static-locations: classpath:/static,classpath:/static/assets
 
 #配置mybatis
 mybatis:

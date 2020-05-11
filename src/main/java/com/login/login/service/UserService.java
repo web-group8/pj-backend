@@ -14,7 +14,11 @@ public class UserService {
     @Autowired
     private UserMapper userDao;
 
-    public User login(String username ,String password){
-        return userDao.login(username,password);
+    public User login(User user){
+        return userDao.login(user);
+    }
+
+    public int regist(User user){
+        return userDao.regist(user);
     }
 }

@@ -3,8 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.login.login.Mapper.UserMapper">
-   <select id="login" resultType="com.login.login.model.User">
+   <select id="login" parameterType="com.login.login.model.User" resultType="com.login.login.model.User">
         select * from t_user where username = #{username} and password = #{password};
     </select>
 
+    <insert id="regist" parameterType="com.login.login.model.User">
+        insert into t_user(id,username,password) values(#{id},#{username},#{password});
+    </insert>
 </mapper>
