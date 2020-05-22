@@ -555,7 +555,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\大三下\高级web\angulars\test\Lab2.1_Code-Angular_Demo-master\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! D:\大三下\高级web\angulars\test\小组\frontend\src\styles.css */"./src/styles.css");
 
 
 /***/ })

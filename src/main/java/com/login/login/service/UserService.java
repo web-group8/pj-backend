@@ -21,4 +21,5 @@ public class UserService {
     public int regist(User user){
         return userDao.regist(user);
     }
+
 }

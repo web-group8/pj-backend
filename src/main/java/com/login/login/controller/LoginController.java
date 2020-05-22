@@ -39,8 +39,8 @@ public class LoginController {
     public User index3(){
         User user=new User();
         user.setId(1);
-        user.setUsername("蔡徐坤");
-        user.setPassword("吴亦凡");
+        user.setUsername("刘醒");
+        user.setPassword("梁非凡");
         return user;
     }
 
@@ -68,13 +68,19 @@ public class LoginController {
     }
 
     @RequestMapping("/regist")
-    public String regist(User user){
-        int a=userService.regist(user);
-        if(a==1){
-            return "regist_success";
-        }else {
-            return "fail";
+    public Result regist(@RequestBody User user){
+        Result res=new Result();
+        try{
+            userService.regist(user);
+            res.setMsg("成功");
+            res.setSuccess(true);
         }
+        catch(Exception ex){
+            res.setMsg("失败");
+            res.setSuccess(false);
+        }
+
+        return res;
     }
 
 }

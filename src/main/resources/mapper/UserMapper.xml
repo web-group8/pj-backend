@@ -8,6 +8,7 @@
     </select>
 
     <insert id="regist" parameterType="com.login.login.model.User">
-        insert into t_user(id,username,password) values(#{id},#{username},#{password});
+        insert into t_user(id,username,password,email) values(#{id},#{username},#{password},#{email});
     </insert>
+
 </mapper>

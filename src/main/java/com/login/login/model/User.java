@@ -10,6 +10,7 @@ public class User {
     private int id;
     private String username;
     private String password;
+    private String email;
 
 
     public int getId() {
@@ -37,5 +38,12 @@ public class User {
         this.password = password;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 }
